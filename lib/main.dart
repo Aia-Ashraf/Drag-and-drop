@@ -66,15 +66,32 @@ class _HomePageState extends State<HomePage> {
             ),
             onDragStarted: onStarted,
             onDragCompleted: onCompleted,
-            axis: Axis.vertical,
-            affinity: Axis.vertical,
             onDraggableCanceled: (Velocity velocity, Offset offset) {
               setState(() => position = offset);
             },
           ),
         ),
+        Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: <Widget>[
+              Container(alignment: Alignment(0, 5),
+                  width: 200.0,
+                  height: 200.0,
+                  child: CircleAvatar(
+                    radius: 50,
+//                backgroundColor: Colors.grey,
+                    backgroundImage: AssetImage('assets/rice.jpg'),
+                  ))
+            ])
       ],
     );
+  }
+}
+
+void onDone() {
+  if (DraggableDetails == Axis.vertical) {
+    print("onDone");
   }
 }
 
