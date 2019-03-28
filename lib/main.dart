@@ -75,14 +75,37 @@ class _HomePageState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.end,
             crossAxisAlignment: CrossAxisAlignment.end,
             children: <Widget>[
-              Container(alignment: Alignment(0, 5),
-                  width: 200.0,
-                  height: 200.0,
-                  child: CircleAvatar(
-                    radius: 50,
+              Container(
+                  width: 300.0,
+                  height: 700.0,
+                  child: new Align(
+                      alignment: Alignment.bottomCenter,
+                      child: CircleAvatar(
+                        radius: 50,
 //                backgroundColor: Colors.grey,
-                    backgroundImage: AssetImage('assets/rice.jpg'),
-                  ))
+                        backgroundImage: AssetImage('assets/rice.jpg'),
+                      )))
+              ,       Container(
+                  width: 30.0,
+                  height: 70.0,
+                  margin:EdgeInsets.fromLTRB(2, 10, 10, 10) ,
+                  child: new Align(
+                      alignment: Alignment.bottomCenter,
+                      child: CircleAvatar(
+                        radius: 50,
+//                backgroundColor: Colors.grey,
+                        backgroundImage: AssetImage('assets/rice.jpg'),
+                      ))),
+              Container(
+                  width: 50.0,
+                  height: 120.0,
+                  child: new Align(
+                      alignment: Alignment.bottomCenter,
+                      child: CircleAvatar(
+                        radius: 50,
+//                backgroundColor: Colors.grey,
+                        backgroundImage: AssetImage('assets/rice.jpg'),
+                      ))),
             ])
       ],
     );
